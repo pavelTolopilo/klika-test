@@ -15,7 +15,6 @@ module.exports = {
             {
                 test: /.jsx?$/,
                 loader: 'babel-loader',
-                // loader: 'babel',
                 exclude: /\/node_modules\//,
                 query: {
                     presets: ['es2015', 'react']
@@ -26,6 +25,10 @@ module.exports = {
             }, {
                 test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
                 loader: 'file?name=[path][name].[ext]'
+            },
+            {
+                test: /\.json$/,
+                loader: "json-loader"
             }
         ]
     },
